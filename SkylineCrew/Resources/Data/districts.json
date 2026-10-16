@@ -1,0 +1,52 @@
+{
+  "districts": [
+    {
+      "id": 1,
+      "name": "Old Town",
+      "background": "BG01",
+      "firstLevel": 1,
+      "lastLevel": 20,
+      "unlockAfterLevel": null
+    },
+    {
+      "id": 2,
+      "name": "Harbor Heights",
+      "background": "BG02",
+      "firstLevel": 21,
+      "lastLevel": 40,
+      "unlockAfterLevel": 20
+    },
+    {
+      "id": 3,
+      "name": "Garden Quarter",
+      "background": "BG03",
+      "firstLevel": 41,
+      "lastLevel": 60,
+      "unlockAfterLevel": 40
+    },
+    {
+      "id": 4,
+      "name": "Market Mile",
+      "background": "BG01",
+      "firstLevel": 61,
+      "lastLevel": 80,
+      "unlockAfterLevel": 60
+    },
+    {
+      "id": 5,
+      "name": "Marina View",
+      "background": "BG02",
+      "firstLevel": 81,
+      "lastLevel": 100,
+      "unlockAfterLevel": 80
+    },
+    {
+      "id": 6,
+      "name": "Sky Gardens",
+      "background": "BG03",
+      "firstLevel": 101,
+      "lastLevel": 120,
+      "unlockAfterLevel": 100
+    }
+  ]
+}

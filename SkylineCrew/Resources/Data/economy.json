@@ -1,0 +1,86 @@
+{
+  "currency": "Bolts",
+  "initialBalance": 0,
+  "purchasedWithMoney": false,
+  "spendOnly": "optional floor color themes",
+  "skins": [
+    {
+      "id": "original",
+      "name": "Original Crew",
+      "cost": 0,
+      "unlocked": true,
+      "sequence": [
+        "F06",
+        "F05",
+        "F04",
+        "F03",
+        "F02",
+        "F01"
+      ]
+    },
+    {
+      "id": "sunshine",
+      "name": "Sunshine Row",
+      "cost": 80,
+      "sequence": [
+        "F03",
+        "F05",
+        "F01"
+      ]
+    },
+    {
+      "id": "ocean",
+      "name": "Ocean Blocks",
+      "cost": 80,
+      "sequence": [
+        "F02",
+        "F04",
+        "F06"
+      ]
+    },
+    {
+      "id": "warm",
+      "name": "Warm Welcome",
+      "cost": 100,
+      "sequence": [
+        "F06",
+        "F01",
+        "F05"
+      ]
+    }
+  ],
+  "daily": {
+    "cooldownSeconds": 86400,
+    "bands": [
+      {
+        "weight": 60,
+        "bolts": 20,
+        "symbols": [
+          "F01",
+          "F02",
+          "F03"
+        ]
+      },
+      {
+        "weight": 30,
+        "bolts": 35,
+        "symbols": [
+          "R02",
+          "R02",
+          "F03"
+        ]
+      },
+      {
+        "weight": 10,
+        "bolts": 60,
+        "symbols": [
+          "R01",
+          "R01",
+          "R01"
+        ]
+      }
+    ],
+    "presentationSeconds": 3.2,
+    "realMoney": false
+  }
+}

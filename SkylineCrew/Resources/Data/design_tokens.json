@@ -1,0 +1,32 @@
+{
+  "colors": {
+    "sky": "#53C5F4",
+    "deepBlue": "#103677",
+    "royalBlue": "#165ACA",
+    "gold": "#FFD437",
+    "amber": "#EC9A19",
+    "cream": "#FFF7E5",
+    "text": "#12335B",
+    "secondary": "#49657F",
+    "success": "#22735A",
+    "warning": "#895017",
+    "danger": "#B94142",
+    "panel": "#FFFCF3"
+  },
+  "cornerRadiiPt": {
+    "button": 18,
+    "panel": 26,
+    "row": 16
+  },
+  "font": "system rounded; headings heavy; body semibold",
+  "minimumBodyPt": 16,
+  "minimumTouchPt": 44,
+  "referenceCanvasPt": [
+    390,
+    844
+  ],
+  "screenMarginPt": 20,
+  "ctaHeightPt": 58,
+  "runtimeArtworkScale": "assetBoundingBoxFit",
+  "uiTextNeverBakedIntoRaster": true
+}

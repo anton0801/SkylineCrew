@@ -1,0 +1,241 @@
+{
+  "buses": {
+    "master": 0.8,
+    "music": 0.45,
+    "effects": 0.8,
+    "ambience": 0.25
+  },
+  "maxSFXVoices": 6,
+  "musicCrossfadeMs": 600,
+  "duckMusicDuringFanfareDB": -7,
+  "runtimeLimiterDBFS": -1,
+  "rules": {
+    "landing": "One material impact plus at most one perfect cue; F05=wood, F02=metal, all other floors=stone.",
+    "perfect": "Streak1 S15; streak2 S16; third S17 replaces perfect cue.",
+    "daily": "S27 maximum10Hz, one S28 each reel at1.6/2.2/2.8s, S29 at3.2; skip cancels pending ticks and stops, playsS29 once. Receipt replay silent.",
+    "strain": "S19 only crossing60 or85 upwards, not eachframe.",
+    "brace": "S18 when arm successfully committed, no repeat for doubletap.",
+    "resume": "3xS08 spaced1s, thenS09; reduceMotion shortens tooneS08+0.3s still phasefrozen.",
+    "lifecycle": "Stop all loops onpause/background/interruption. AVAudioSession ambient; no background audio; respect silent mode.",
+    "settings": "SwitchingEffects off stopsactiveSFX; Music off fades200ms; no tap for disabledcontrol.",
+    "priority": "success>failure>perfect>impact>UI; prevent redundant S01 ongameDrop becauseS10 alreadyconfirms."
+  },
+  "events": [
+    {
+      "id": "S01",
+      "file": "audio/wav/sfx/S01_tap.wav",
+      "event": "UI.accept",
+      "loop": false
+    },
+    {
+      "id": "S02",
+      "file": "audio/wav/sfx/S02_back.wav",
+      "event": "UI.back",
+      "loop": false
+    },
+    {
+      "id": "S03",
+      "file": "audio/wav/sfx/S03_sheet_open.wav",
+      "event": "UI.sheetOpen",
+      "loop": false
+    },
+    {
+      "id": "S04",
+      "file": "audio/wav/sfx/S04_sheet_close.wav",
+      "event": "UI.sheetClose",
+      "loop": false
+    },
+    {
+      "id": "S05",
+      "file": "audio/wav/sfx/S05_toggle.wav",
+      "event": "Settings.change",
+      "loop": false
+    },
+    {
+      "id": "S06",
+      "file": "audio/wav/sfx/S06_unavailable.wav",
+      "event": "UI.invalid",
+      "loop": false
+    },
+    {
+      "id": "S07",
+      "file": "audio/wav/sfx/S07_level_select.wav",
+      "event": "Level.select",
+      "loop": false
+    },
+    {
+      "id": "S08",
+      "file": "audio/wav/sfx/S08_countdown.wav",
+      "event": "Resume.countdownTick",
+      "loop": false
+    },
+    {
+      "id": "S09",
+      "file": "audio/wav/sfx/S09_start.wav",
+      "event": "Run.start",
+      "loop": false
+    },
+    {
+      "id": "S10",
+      "file": "audio/wav/sfx/S10_release.wav",
+      "event": "Floor.release",
+      "loop": false
+    },
+    {
+      "id": "S11",
+      "file": "audio/wav/sfx/S11_fall_air.wav",
+      "event": "Floor.falling",
+      "loop": false
+    },
+    {
+      "id": "S12",
+      "file": "audio/wav/sfx/S12_land_wood.wav",
+      "event": "Floor.landed.wood",
+      "loop": false
+    },
+    {
+      "id": "S13",
+      "file": "audio/wav/sfx/S13_land_stone.wav",
+      "event": "Floor.landed.stone",
+      "loop": false
+    },
+    {
+      "id": "S14",
+      "file": "audio/wav/sfx/S14_land_metal.wav",
+      "event": "Floor.landed.metal",
+      "loop": false
+    },
+    {
+      "id": "S15",
+      "file": "audio/wav/sfx/S15_perfect_one.wav",
+      "event": "Floor.perfect1",
+      "loop": false
+    },
+    {
+      "id": "S16",
+      "file": "audio/wav/sfx/S16_perfect_two.wav",
+      "event": "Floor.perfect2",
+      "loop": false
+    },
+    {
+      "id": "S17",
+      "file": "audio/wav/sfx/S17_brace_ready.wav",
+      "event": "Brace.charged",
+      "loop": false
+    },
+    {
+      "id": "S18",
+      "file": "audio/wav/sfx/S18_brace_use.wav",
+      "event": "Brace.armed",
+      "loop": false
+    },
+    {
+      "id": "S19",
+      "file": "audio/wav/sfx/S19_strain.wav",
+      "event": "Strain.thresholdCrossed",
+      "loop": false
+    },
+    {
+      "id": "S20",
+      "file": "audio/wav/sfx/S20_miss.wav",
+      "event": "Floor.missed",
+      "loop": false
+    },
+    {
+      "id": "S21",
+      "file": "audio/wav/sfx/S21_retry.wav",
+      "event": "Run.failed",
+      "loop": false
+    },
+    {
+      "id": "S22",
+      "file": "audio/wav/sfx/S22_beacon.wav",
+      "event": "Roof.lit",
+      "loop": false
+    },
+    {
+      "id": "S23",
+      "file": "audio/wav/sfx/S23_complete.wav",
+      "event": "Run.completed",
+      "loop": false
+    },
+    {
+      "id": "S24",
+      "file": "audio/wav/sfx/S24_star.wav",
+      "event": "Result.starReveal",
+      "loop": false
+    },
+    {
+      "id": "S25",
+      "file": "audio/wav/sfx/S25_bolts.wav",
+      "event": "Wallet.credited",
+      "loop": false
+    },
+    {
+      "id": "S26",
+      "file": "audio/wav/sfx/S26_district.wav",
+      "event": "District.unlocked",
+      "loop": false
+    },
+    {
+      "id": "S27",
+      "file": "audio/wav/sfx/S27_reel_tick.wav",
+      "event": "Daily.reelTick",
+      "loop": false
+    },
+    {
+      "id": "S28",
+      "file": "audio/wav/sfx/S28_reel_stop.wav",
+      "event": "Daily.reelStop",
+      "loop": false
+    },
+    {
+      "id": "S29",
+      "file": "audio/wav/sfx/S29_supply.wav",
+      "event": "Daily.rewardPresented",
+      "loop": false
+    },
+    {
+      "id": "S30",
+      "file": "audio/wav/sfx/S30_theme.wav",
+      "event": "Theme.equipped",
+      "loop": false
+    },
+    {
+      "id": "M01",
+      "file": "audio/wav/music/M01_sunny_rooftops.wav",
+      "event": "Home/Onboarding/Collection",
+      "loop": true
+    },
+    {
+      "id": "M02",
+      "file": "audio/wav/music/M02_steady_hands.wav",
+      "event": "Gameplay",
+      "loop": true
+    },
+    {
+      "id": "M03",
+      "file": "audio/wav/music/M03_harbor_breeze.wav",
+      "event": "Gameplay districts2/5",
+      "loop": true
+    },
+    {
+      "id": "M04",
+      "file": "audio/wav/music/M04_depot_delivery.wav",
+      "event": "Daily/Workshop",
+      "loop": true
+    },
+    {
+      "id": "A01",
+      "file": "audio/wav/ambience/A01_city_air.wav",
+      "event": "Home/Gameplay",
+      "loop": true
+    },
+    {
+      "id": "A02",
+      "file": "audio/wav/ambience/A02_crane_motor.wav",
+      "event": "Floor.aiming",
+      "loop": true
+    }
+  ]
+}
